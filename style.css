@@ -7,6 +7,8 @@
     --White: hsl(0, 0%, 100%);
     --Lightgray: hsl(0, 0%, 81%);
     --Lightgrayishblue: hsl(210, 46%, 95%);
+
+    --z-para: 1000;
 }
 
 * {
@@ -79,7 +81,19 @@ body {
 }
 
 .card:nth-child(1) {
-    background: var(--Moderateviolet)
+    background: var(--Moderateviolet);
+    position: relative;
+}
+
+.card:nth-child(1) svg {
+    position: absolute;
+    top: 0;
+    right: 5rem;
+}
+
+.card:nth-child(1)>.card__body {
+    position: relative;
+    z-index: var(--z-para);
 }
 
 .card:nth-child(2) {
